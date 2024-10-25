@@ -1,0 +1,157 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+
+body {
+    background: linear-gradient(to right, #74b9ff, #a29bfe);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+
+header {
+    background-color: #0984e3;
+    padding: 10px 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+header nav a:hover {
+    display: inline-block; 
+    background-color: #9ac9ec;
+    
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input {
+    padding: 15px;
+    border: 1px solid #dfe6e9;
+    border-radius: 5px;
+    width:260px;
+}
+#error{
+    padding-top: 20px ;
+}
+button {
+    background-color: #0984e3;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #74b9ff;
+}
+
+.login-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;}
+    
+
+.login-container h2 {
+    margin-bottom: 20px;
+    color: #2d3436;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    width: 80%;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card h2 {
+    margin-bottom: 10px;
+    color: #0984e3;
+}
+
+.card a {
+    text-decoration: none;
+    color: #6c5ce7;
+    font-weight: bold;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+thead {
+    background-color: #0984e3;
+    color: white;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #dfe6e9;
+    text-align: center;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f1f2f6;
+}
+@media (max-width: 768px) {
+    .container {
+        width: 100%; /* Giúp nội dung không bị tràn trên màn hình nhỏ */
+    }
+
+    input {
+        width: 100%; /* Các trường input sẽ rộng theo chiều ngang màn hình */
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+}

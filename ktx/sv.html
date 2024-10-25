@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Sinh Viên</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="ttphong.html">Quản Lý Phòng Ký Túc Xá</a>
+            <a href="sv.html">Quản Lý Sinh Viên</a>
+            <a href="tienphong.html">Quản Lý Hóa Đơn</a>
+            <a href="dichvu.html">Quản Lý Tiền Điện, Nước, Dịch Vụ</a>
+            <a href="../index.html" onclick="logout()">Đăng xuất</a>
+        </nav>
+    </header>
+    <h1>Danh Sách Sinh Viên</h1>
+    <input type="text" id="msv" placeholder="Mã Sinh Viên" required>
+    <input type="number" id="sp" placeholder="Phòng" required>
+    <button id="addStudent">+Thêm</button>
+    <table>
+        <thead>
+            <tr>
+                <th>Mã SV</th>
+                <th>Họ và tên</th>
+                <th>Giới tính</th>
+                <th>Quê quán</th>
+                <th>Ngày/tháng/năm sinh</th>
+                <th>Lớp</th>
+                <th>Số phòng</th>
+                <th>Ngày Vào</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>2021001</td>
+                <td>Nguyễn Văn A</td>
+                <td>Nam</td>
+                <td>Hải Phòng</td>
+                <td>01/01/2005</td>
+                <td>Công Nghệ Thông Tin</td>
+                <td>101</td>
+                <td>11/11/2023</td>
+                <td>a@gmail.com</td>
+            </tr>
+            <tr>
+                <td>2021002</td>
+                <td>Trần Thị B</td>
+                <td>Nữ</td>
+                <td>Hải Dương</td>
+                <td>11/05/2006</td>
+                <td>Logicstic</td>
+                <td>102</td>
+                <td>11/11/2023</td>
+                <td>b@gmail.com</td>
+            </tr>
+            <tr>
+                <td>2021003</td>
+                <td>Nguyễn Văn C</td>
+                <td>Nam</td>
+                <td>Cao Bằng</td>
+                <td>24/01/2006</td>
+                <td>Công Nghệ Thông Tin</td>
+                <td>101</td>
+                <td>01/9/2023</td>
+                <td>c@gmail.com</td>
+            </tr>
+            <tr>
+                <td>2021004</td>
+                <td>Trịnh Hồng D</td>
+                <td>Nữ</td>
+                <td>Hà Nội</td>
+                <td>22/11/2003</td>
+                <td>Kinh Tế</td>
+                <td>102</td>
+                <td>11/11/2023</td>
+                <td>d@gmail.com</td>
+            </tr>
+            <tr>
+                <td>2021005</td>
+                <td>Nguyễn Văn E</td>
+                <td>Nam</td>
+                <td>Thái Bình</td>
+                <td>21/11/2005</td>
+                <td>Quản Lý Xây Dựng</td>
+                <td>101</td>
+                <td>11/11/2023</td>
+                <td>e@gmail.com</td>
+            </tr>
+            <tr>
+                <td>2021006</td>
+                <td>Nguyễn Văn F</td>
+                <td>Nam</td>
+                <td>Quảng Ninh</td>
+                <td>20/10/2004</td>
+                <td>Quản Trị Kinh Doanh</td>
+                <td>101</td>
+                <td>11/11/2023</td>
+                <td>f@gmail.com</td>
+            </tr>
+            <tr>
+                <td>2021007</td>
+                <td>Nguyễn Thị G</td>
+                <td>Nữ</td>
+                <td>Hồ Chí Minh</td>
+                <td>05/05/2004</td>
+                <td>Kế Toán</td>
+                <td>103</td>
+                <td>01/11/2024</td>
+                <td>g@gmail.com</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

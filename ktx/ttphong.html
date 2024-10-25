@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh Sách Phòng</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="ttphong.html">Quản Lý Phòng Ký Túc Xá</a>
+            <a href="sv.html">Quản Lý Sinh Viên</a>
+            <a href="tienphong.html">Quản Lý Hóa Đơn</a>
+            <a href="dichvu.html">Quản Lý Tiền Điện, Nước, Dịch Vụ</a>
+            <a href="../index.html" onclick="logout()">Đăng xuất</a>
+        </nav>
+    </header>
+    <h1>Quản Lý Phòng Ký Túc Xá</h1>
+    <input type="number" id="sp" placeholder="Phòng" required>
+    <input type="number" id="sl" placeholder="Số Lượng" required>
+    <input type="text" id="tt" placeholder="Tình Trạng" required>
+    <button type="submit">+Thêm</button>
+    <table>
+        <thead>
+            <tr>
+                <th>Phòng</th>
+                <th>Số Lượng</th>
+                <th>Tình Trạng</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>101</td>
+                <td>4/4</td>
+                <td>Đã Đầy</td>
+            </tr>
+            <tr>
+                <td>102</td>
+                <td>2/4</td>
+                <td>Còn Trống</td>
+            </tr>
+            <tr>
+                <td>103</td>
+                <td>1/4</td>
+                <td>Còn Trống</td>
+            </tr>
+            <tr>
+                <td>104</td>
+                <td>0/4</td>
+                <td>Còn Trống</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script src="main.js"></script>
+</body>
+</html>
+
+

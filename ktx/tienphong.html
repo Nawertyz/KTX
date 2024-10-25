@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hóa Đơn</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="ttphong.html">Quản Lý Phòng Ký Túc Xá</a>
+            <a href="sv.html">Quản Lý Sinh Viên</a>
+            <a href="tienphong.html">Quản Lý Hóa Đơn</a>
+            <a href="dichvu.html">Quản Lý Tiền Điện, Nước, Dịch Vụ</a>
+            <a href="../index.html" onclick="logout()">Đăng xuất</a>
+        </nav>
+    </header>
+    <h1>Quản Lý Hóa Đơn</h1>
+    <input type="number" id="msv" placeholder="Mã Sinh Viên" required>
+    <input type="text" id="tien" placeholder="Số Tiền" required>
+    <button type="submit">+Thêm</button>
+    <table>
+        <thead>
+            <tr>
+                <th>Sinh Viên</th>
+                <th>Mã Sinh Viên</th>
+                <th>Số Tiền</th>
+                <th>Ngày Tạo</th>
+                <th>Trạng Thái</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Nguyễn Văn A</td>
+                <td>2021001</td>
+                <td>240.000 VND</td>
+                <td>01/10/2024</td>
+                <td>Đã thanh toán</td>
+            </tr>
+            <tr>
+                <td>Trần Thị B</td>
+                <td>2021002</td>
+                <td>240.000 VND</td>
+                <td>01/10/2024</td>
+                <td>Chưa thanh toán</td>
+            </tr>
+            <tr>
+                <td>Nguyễn Văn C</td>
+                <td>2021003</td>
+                <td>240.000 VND</td>
+                <td>01/10/2024</td>
+                <td>Đã thanh toán</td>
+            </tr>
+            <tr>
+                <td>Trịnh Hồng D</td>
+                <td>2021004</td>
+                <td>240.000 VND</td>
+                <td>01/10/2024</td>
+                <td>Chưa thanh toán</td>
+            </tr>
+            <tr>
+                <td>Nguyễn Văn E</td>
+                <td>2021005</td>
+                <td>240.000 VND</td>
+                <td>01/10/2024</td>
+                <td>Chưa thanh toán</td>
+            </tr>
+            <tr>
+                <td>Nguyễn Văn F</td>
+                <td>2021006</td>
+                <td>240.000 VND</td>
+                <td>01/10/2024</td>
+                <td>Đã thanh toán</td>
+            </tr>
+            <tr>
+                <td>Nguyễn Thị G</td>
+                <td>2021007</td>
+                <td>240.000 VND</td>
+                <td>01/10/2024</td>
+                <td>Chưa thanh toán</td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="main.js"></script>
+</body>
+</html>
