@@ -42,7 +42,17 @@ function dinhDangTienTe(amount) {
 
 // Hàm tải dữ liệu từ localStorage
 function taiDuLieu() {
-    const data = JSON.parse(localStorage.getItem('dichVuData')) || [];
+    let data = JSON.parse(localStorage.getItem('dichVuData')) || [];
+    
+    // Nếu dữ liệu rỗng, khởi tạo dữ liệu mẫu
+    if (data.length === 0) {
+        data = [
+            { phong: '101', tienDien: 150000, tienNuoc: 100000, dichVu: 100000, ngayTao: '01/10/2024', trangThai: 'Đã thanh toán' },
+            { phong: '102', tienDien: 120000, tienNuoc: 120000, dichVu: 100000, ngayTao: '01/10/2024', trangThai: 'Đã thanh toán' }
+        ];
+        localStorage.setItem('dichVuData', JSON.stringify(data));
+    }
+    
     const tableBody = document.querySelector('#dichvu-table tbody');
     tableBody.innerHTML = '';
 
