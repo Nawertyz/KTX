@@ -1,0 +1,399 @@
+/* Định dạng cho toàn bộ trang */
+body {
+    font-family: Arial, sans-serif;
+    background: url('../images/banner-truong-dai-hoc-giao-thong-van-tai.png') no-repeat center center;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden; /* Ngăn chặn cuộn ngang */
+    
+}
+
+.header-logo {
+    display: flex; /* Sử dụng flexbox để căn giữa logo và chữ */
+    align-items: center;
+    margin: 12px;
+    padding: 10px;
+}
+.header-logo a {
+    text-decoration: none; 
+    color: black; 
+  }
+.header-logo a:hover {
+    background-color: #919191;
+}
+  
+.header-logo img {
+    height: auto; /* Giữ tỉ lệ khung hình của logo */
+
+    width: 50px;
+     /* Đặt chiều rộng cho logo */
+    height: auto; /* Giữ tỉ lệ khung hình của logo */
+    margin-right: 10px; /* Thêm khoảng cách giữa logo và chữ */
+}
+.header-logo span {
+    font-weight: bold; /* Làm cho chữ in đậm */
+    font-size: 14px; /* Thay đổi kích thước chữ (tùy chọn) */
+}
+
+
+.icon{
+    width: 200px;
+    float: left;
+    height: 50px;
+}
+
+
+/* Định dạng cho phần header */
+header {
+    display: flex;
+    width: 100%;
+
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    box-shadow: o 2px 8px rgba(0, 0, 0, 0.1);
+}
+.header .logo {
+    height: 40px; /* Kích thước logo */
+    margin-right: 10px;
+  }
+header nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+header nav a {
+    color: rgb(111, 95, 95);
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 8px 17.8px;
+    transition: background-color 0.3s;
+    margin: 5px;
+}
+
+header nav a:hover {
+    background-color: #a1d7df;
+    border-radius: 20px;
+}
+.nav {
+    margin-top: 20px; 
+    display: flex;
+    text-align: center;
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    flex-wrap: wrap; /* Cho phép xuống dòng */
+    padding: 5px;
+    /* Điều chỉnh khoảng cách như mong muốn */
+}
+nav a {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 5px;
+    text-decoration: none;
+    font-size: 10px;
+    transition: color 0.3s ease;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+
+ 
+nav a i {
+    margin-right: 13px; /* Khoảng cách giữa biểu tượng và văn bản */
+    color: #ec6f7a; /* Màu của biểu tượng */
+    font-size: 27px;
+}
+nav i:hover {
+    color: #8359cf; /* Màu khi hover qua biểu tượng */
+}
+nav a:hover {
+    color: #101010; /* Màu văn bản khi hover */
+    padding: 15px;
+}
+input {
+    border: none; /* Loại bỏ viền mặc định */
+    outline: none; /* Loại bỏ outline mặc định */
+    background-color: white; /* Màu nền */
+    padding: 8px; /* Đệm nội dung */
+    border-radius: 4px; /* Bo tròn góc */
+}
+input[type="number"]:focus,
+input[type="text"]:focus {
+    border: 2px solid black;
+    outline: none;
+}
+
+
+
+/* Định dạng cho phần tiêu đề chính */
+h1 {
+
+    font-size: 26px; /* Kích thước chữ */
+    font-weight: bold; /* Làm cho chữ in đậm */
+    color: #17add7; /* Màu chữ */
+    text-align: center; /* Căn giữa tiêu đề */
+    margin: 3px 0px; /* Khoảng cách bên trên và dưới tiêu đề */
+    text-transform: uppercase; /* Chữ in hoa */
+    letter-spacing: 1px; /* Khoảng cách giữa các chữ cái */
+    position: relative; /* Để sử dụng cho hiệu ứng */
+    font-family: 'Times New Roman', Times, serif;
+
+}
+h1::after {
+    content: ""; /* Tạo một phần tử giả */
+    display: block; /* Hiển thị như một khối */
+    width: 50%; /* Chiều rộng của đường gạch dưới */
+    height: 5px; /* Chiều cao của đường gạch dưới */
+    background: #a3cadd; /* Màu sắc cho đường gạch dưới */
+    margin: 10px auto; /* Căn giữa */
+    border-radius: 10px; /* Bo góc cho đường gạch dưới */
+    transition: width 0.7s; /* Hiệu ứng chuyển tiếp khi hover */
+}
+
+h1:hover::after {
+    width: 70%; /* Đường gạch dưới mở rộng khi hover */
+}
+/*màu cho thanh toán*/
+button.paid {
+    background-color: #28a745;
+    color: white;
+}
+button:not(.paid) {
+    background-color: #e65867;
+    color: white;
+}
+td:contains('Chưa thanh toán') {
+    color: red; /* Màu đỏ cho trạng thái chưa thanh toán */
+    font-weight: bold; /* In đậm chữ */
+}
+
+/* Thêm cho các ô có thể chỉnh sửa */
+td[contenteditable="true"] {
+    background-color: #e7f3fe; /* Màu nền cho ô có thể chỉnh sửa */
+}
+/* Định dạng toàn bộ form */
+form {
+    max-width: 250px; /* Đặt chiều rộng tối đa cho form */
+    width: 45%;
+    padding: 20px;
+    background-color: #a1cfee;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+input[type="text"],
+input[type="number"],
+button[type="submit"] {
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #bdd1e9;
+    border-radius: 10px;
+    margin-bottom: 15px; /* Tăng khoảng cách giữa các trường */
+    width: 100%; /* Chiều rộng 100% để đồng nhất với submit */
+    box-sizing: border-box; /* Đảm bảo padding không làm tăng kích thước trường */
+}
+
+button[type="submit"] {
+    background-color:#2897ec;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color:  #74b9ff;
+}
+
+/* Định dạng cho bảng */
+
+table {
+    width: 80%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+table thead {
+    background-color: #8cb5d4;
+    color: white;
+}
+
+table th, table td {
+    padding: 12px;
+    border: 1px solid #ccc;
+    text-align: center;
+    font-size: 16px;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f0f5f5; /* Xanh xám nhạt */
+}
+table tbody tr:nth-child(odd){
+    background-color: #ffffff; /* Màu trắng */
+}
+table {
+    width: 100%; /* Đảm bảo bảng chiếm toàn bộ chiều ngang */
+    border-collapse: collapse; /* Gộp các đường viền */
+    margin-top: 20px;
+}
+
+
+
+/* Đặt chiều rộng cố định cho các cột */
+th:nth-child(1), td:nth-child(1) {
+    width: 10%; 
+}
+
+th:nth-child(2), td:nth-child(2) {
+    width: 20%;
+}
+
+th:nth-child(3), td:nth-child(3) {
+    width: 5%; 
+}
+
+th:nth-child(4), td:nth-child(4) {
+    width: 15%; 
+}
+
+th:nth-child(5), td:nth-child(5) {
+    width: 15%;
+}
+
+
+
+
+/* CSS cho bảng */
+#dichvu-table {
+    width: 100%; /* Đặt chiều rộng của bảng */
+    border-collapse: collapse; /* Xóa khoảng cách giữa các ô */
+}
+
+#dichvu-table th,
+#dichvu-table td {
+    border: 1px solid #ddd; /* Thêm đường viền cho các ô */
+    padding: 8px; /* Thêm khoảng cách bên trong các ô */
+}
+
+/* Đặt chiều rộng cố định cho các cột */
+#dichvu-table th:nth-child(1),
+#dichvu-table td:nth-child(1) {
+    width: 10%; /* Phòng */
+}
+
+#dichvu-table th:nth-child(2),
+#dichvu-table td:nth-child(2) {
+    width: 10%; /* Điện */
+}
+
+#dichvu-table th:nth-child(3),
+#dichvu-table td:nth-child(3) {
+    width: 10%; /* Nước */
+}
+
+#dichvu-table th:nth-child(4),
+#dichvu-table td:nth-child(4) {
+    width: 10%; /* Dịch vụ */
+}
+
+#dichvu-table th:nth-child(5),
+#dichvu-table td:nth-child(5) {
+    width: 10%; /* Ngày tạo */
+}
+
+#dichvu-table th:nth-child(6),
+#dichvu-table td:nth-child(6) {
+    width: 10%; /* Trạng thái */
+}
+
+#dichvu-table th:nth-child(7),
+#dichvu-table td:nth-child(7) {
+    width: 10%; /* Nút chỉnh sửa và xóa */
+}
+/* Điều chỉnh cho màn hình nhỏ hơn */
+/* Định dạng cho màn hình nhỏ */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow-x: auto; /* Thêm thanh cuộn ngang */
+        white-space: nowrap; /* Giữ các phần tử không xuống dòng */
+        display: flex;
+    }
+    /* Đổi từ sắp xếp ngang sang dọc cho thanh navigation */
+    header nav {
+        flex-direction: column;
+        gap: 10px;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    /* Điều chỉnh lại độ rộng của form và bảng */
+    form {
+        width: 100%;
+        padding: 10px;
+    }
+    table {
+        overflow-x: auto;
+        display: block; /* Hiển thị bảng như một khối có thể cuộn */
+        width: 100%; /* Chiều rộng đầy đủ */
+        min-width: 600px; /* Đặt chiều rộng tối thiểu */
+    }
+    /* Điều chỉnh kích thước chữ và căn giữa tiêu đề */
+    h1 {
+        font-size: 22px;
+        padding: 10px;
+    }
+
+    /* Đảm bảo các ô card sẽ xếp dọc */
+
+    /* Card rộng 100% trong màn hình nhỏ */
+    .card {
+        width: 90%;
+        margin: 10px 0;
+        min-width: 250px; /* Đặt chiều rộng tối thiểu cho mỗi card */
+        display: inline-block; /* Hiển thị card theo dòng */
+    }
+
+    /* Giảm kích thước font của các liên kết điều hướng */
+    nav a {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    /* Điều chỉnh kích thước các input */
+    input[type="text"],
+    input[type="number"],
+    button[type="submit"] {
+        font-size: 14px;
+    }
+}
+
+/* Định dạng cho màn hình rất nhỏ, dưới 480px */
+@media (max-width: 480px) {
+    
+    h1 {
+        font-size: 20px;
+    }
+
+    .input-box, .btn {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    /* Tăng kích thước của các biểu tượng */
+    nav a i {
+        font-size: 20px;
+    }
+}

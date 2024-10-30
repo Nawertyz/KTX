@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Tiền Điện, Nước</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <header>
+        <div class="header-logo">
+            <img src="../images/Logo-Dai-Hoc-Giao-Thong-Van-Tai-UTC.png" alt="Logo UTC" />
+            <span><a href="main.html">QUẢN LÝ KTX</a></span>
+        </div>
+        <nav>
+            <a href="ttphong.html"><i class="fas fa-building"></i> Quản Lý Phòng Ký Túc Xá</a>
+            <a href="sv.html"><i class="fas fa-user-graduate"></i> Quản Lý Sinh Viên</a>
+            <a href="tienphong.html"><i class="fas fa-file-invoice"></i> Quản Lý Hóa Đơn</a>
+            <a href="dichvu.html"><i class="fas fa-water"></i> Quản Lý Tiền Điện, Nước, Dịch Vụ</a>
+            <a href="../index.html"><i class="fas fa-sign-out-alt"></i> Đăng Xuất</a>
+        </nav>
+        
+    </header>
+    <h1>Tiền Điện, Nước</h1>
+    <form id="dichvu-form">        
+        <label for="phong">Phòng:</label><br>
+        <input type="number" id="phong" required><br>
+
+        <label for="dien">Tiêu thụ điện (kWh):</label><br>
+        <input type="number" id="dien" required ><br>
+
+        <label for="nuoc">Tiêu thụ nước (m³):</label><br>
+        <input type="number" id="nuoc" required><br>
+
+        <button type="submit">+Thêm</button>
+    </form>
+    <div id="thongbao" class="hidden"></div>
+    <button id="clear-local-storage">Xóa tất cả dữ liệu</button>
+ 
+    
+</div>
+    <table id="dichvu-table">
+        <thead>
+            <tr>
+                <th>Phòng</th>
+                <th>Điện (VND)</th>
+                <th>Nước (VND)</th>
+                <th>Dịch Vụ (VND)</th>
+                <th>Ngày Tạo</th>
+                <th>Trạng Thái</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>101</td>
+                <td>150.000</td>
+                <td>100.000</td>
+                <td>100.000</td>
+                <td>01/10/2024</td>
+                <td>Đã thanh toán</td>
+            </tr>
+            <tr>
+                <td>102</td>
+                <td>120.000</td>
+                <td>120.000</td>
+                <td>100.000</td>
+                <td>01/10/2024</td>
+                <td>Đã thanh toán</td>
+            </tr>
+            <tr>
+                <td>103</td>
+                <td>120.000</td>
+                <td>120.000</td>
+                <td>100.000</td>
+                <td>01/10/2024</td>
+                <td>Đã thanh toán</td>
+            </tr>
+            <tr>
+                <td>104</td>
+                <td>120.000</td>
+                <td>120.000</td>
+                <td>100.000</td>
+                <td>01/10/2024</td>
+                <td>Đã thanh toán</td>
+            </tr>
+            <tr>
+                <td>105</td>
+                <td>120.000</td>
+                <td>120.000</td>
+                <td>100.000</td>
+                <td>01/10/2024</td>
+                <td>Đã thanh toán</td>
+            </tr>
+            <tr>
+                <td>106</td>
+                <td>120.000</td>
+                <td>120.000</td>
+                <td>100.000</td>
+                <td>01/10/2024</td>
+                <td>Đã thanh toán</td>
+            </tr>
+            <tr>
+                <td>107</td>
+                <td>120.000</td>
+                <td>120.000</td>
+                <td>100.000</td>
+                <td>01/10/2024</td>
+                <td>Đã thanh toán</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<script src="dichvu.js"></script>
+</body>
+</html>

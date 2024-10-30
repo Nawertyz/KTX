@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh Sách Phòng</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+        
+    <header>
+        <div class="header-logo">
+            <img src="../images/Logo-Dai-Hoc-Giao-Thong-Van-Tai-UTC.png" alt="Logo UTC" />
+            <span><a href="main.html">QUẢN LÝ KTX</a></span>
+        </div>
+        <nav>
+            <a href="ttphong.html"><i class="fas fa-building"></i> Quản Lý Phòng Ký Túc Xá</a>
+            <a href="sv.html"><i class="fas fa-user-graduate"></i> Quản Lý Sinh Viên</a>
+            <a href="tienphong.html"><i class="fas fa-file-invoice"></i> Quản Lý Hóa Đơn</a>
+            <a href="dichvu.html"><i class="fas fa-water"></i> Quản Lý Tiền Điện, Nước, Dịch Vụ</a>
+            <a href="../index.html"><i class="fas fa-sign-out-alt"></i> Đăng Xuất</a>
+        </nav>
+        
+    </header>
+    <h1>Quản Lý Phòng Ký Túc Xá</h1>
+    <form>
+        <label for="sp">Số Phòng:</label><br>
+        <input type="number" id="sp"required> <br>
+        <label for="sl">Số Lượng:</label><br>
+        <input type="number" id="sl"required><br>
+        <button type="submit">Cập Nhật</button>
+    </form>    
+    <table>
+        <thead>
+            <tr>
+                <th>Số Phòng</th>
+                <th>Số Lượng Sinh Viên</th>
+                <th>Phòng</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>101</td>
+                <td>4/4</td>
+                <td>Đã Đầy</td>
+            </tr>
+            <tr>
+                <td>102</td>
+                <td>3/4</td>
+                <td>Còn Trống</td>
+            </tr>
+            <tr>
+                <td>103</td>
+                <td>0/4</td>
+                <td>Còn Trống</td>
+            </tr>
+            <tr>
+                <td>104</td>
+                <td>4/4</td>
+                <td>Đã Đầy</td>
+            </tr>
+            <tr>
+                <td>105</td>
+                <td>3/4</td>
+                <td>Còn Trống</td>
+            </tr>
+            <tr>
+                <td>106</td>
+                <td>4/4</td>
+                <td>Đã Đầy</td>
+            </tr>
+            <tr>
+                <td>107</td>
+                <td>4/4</td>
+                <td>Đã Đầy</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script src="ttphong.js"></script>
+</body>
+</html>
+

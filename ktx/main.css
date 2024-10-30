@@ -1,0 +1,53 @@
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px; /* Khoảng cách giữa các ô */
+    justify-content: center; /* Căn giữa các ô theo chiều ngang */
+    max-width: 900px; /* Giới hạn chiều rộng tối đa của container */
+    margin: auto; /* Căn giữa container trong trang */
+}
+
+/* Định dạng cho mỗi ô card */
+.card {
+    background-color: #d0e8f2;
+    color: #1c1d1e;
+    border: none;
+    border-radius: 18px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: calc(33.33% - 20px);
+    height: 172px;
+    text-align: center;
+    margin: 3px;
+    transition: transform 0.7s;
+    text-decoration: none;
+}
+
+.card a {
+    font-size: 23px;
+    text-decoration: none;
+    color: inherit; /* Đảm bảo màu chữ lấy từ màu chữ của card */
+    font-weight: bold; /* Đậm chữ */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Hiệu ứng nâng card lên khi hover */
+    background-color: #a6e8f7; /* Thay đổi màu nền khi hover */
+}
+.card i {
+    color: #0984e3; /* Màu mặc định cho biểu tượng */
+}
+
+.card i:hover {
+    color: #f76f6f; /* Màu khi hover qua biểu tượng */
+}
+.card span {
+    font-size: 23px;
+    font-weight: bold;
+    color: inherit;
+}

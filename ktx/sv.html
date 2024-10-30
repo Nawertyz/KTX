@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Sinh Viên</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-logo">
+            <img src="../images/Logo-Dai-Hoc-Giao-Thong-Van-Tai-UTC.png" alt="Logo UTC" />
+            <span><a href="main.html">QUẢN LÝ KTX</a></span>
+        </div>
+        <nav>
+            <a href="ttphong.html"><i class="fas fa-building"></i> Quản Lý Phòng Ký Túc Xá</a>
+            <a href="sv.html"><i class="fas fa-user-graduate"></i> Quản Lý Sinh Viên</a>
+            <a href="tienphong.html"><i class="fas fa-file-invoice"></i> Quản Lý Hóa Đơn</a>
+            <a href="dichvu.html"><i class="fas fa-water"></i> Quản Lý Tiền Điện, Nước, Dịch Vụ</a>
+            <a href="../index.html"><i class="fas fa-sign-out-alt"></i> Đăng Xuất</a>
+        </nav>
+    </header>
+    <h1>Danh Sách Sinh Viên</h1>
+    <form>
+        <label for="msv">Mã Sinh Viên:</label><br>
+        <input type="number" id="msv"><br>
+        <label for="sp">Số Phòng:</label><br>
+        <input type="number" id="sp"><br>
+        <button type="submit">+Thêm</button>
+    </form>
+    <table>
+        <thead>
+            <tr>
+                <th>Mã SV</th>
+                <th>Họ và tên</th>
+                <th>Giới tính</th>
+                <th>Quê quán</th>
+                <th>Ngày/tháng/năm sinh</th>
+                <th>Lớp</th>
+                <th>Số phòng</th>
+                <th>Liên hệ</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>2021001</td>
+                <td>Nguyễn Văn A</td>
+                <td>Nam</td>
+                <td>Hải Phòng</td>
+                <td>01/01/2005</td>
+                <td>1</td>
+                <td>101</td>
+                <td>0123456789</td>
+            </tr>
+            <tr>
+                <td>2021002</td>
+                <td>Trần Thị B</td>
+                <td>Nữ</td>
+                <td>Hải Dương</td>
+                <td>11/05/2006</td>
+                <td>3</td>
+                <td>102</td>
+                <td>0987654321</td>
+            </tr>
+            <tr>
+                <td>2021003</td>
+                <td>Nguyễn Văn C</td>
+                <td>Nam</td>
+                <td>Cao Bằng</td>
+                <td>24/01/2006</td>
+                <td>2</td>
+                <td>101</td>
+                <td>0331254669</td>
+            </tr>
+            <tr>
+                <td>2021004</td>
+                <td>Trịnh Hồng D</td>
+                <td>Nữ</td>
+                <td>Hà Nội</td>
+                <td>22/11/2003</td>
+                <td>1</td>
+                <td>102</td>
+                <td>0789456123</td>
+            </tr>
+            <tr>
+                <td>2021005</td>
+                <td>Nguyễn Văn E</td>
+                <td>Nam</td>
+                <td>Thái Bình</td>
+                <td>21/11/2005</td>
+                <td>6</td>
+                <td>101</td>
+                <td>01239876</td>
+            </tr>
+            <tr>
+                <td>2021006</td>
+                <td>Nguyễn Văn F</td>
+                <td>Nam</td>
+                <td>Quảng Ninh</td>
+                <td>20/10/2004</td>
+                <td>3</td>
+                <td>101</td>
+                <td>0159875321</td>
+            </tr>
+            <tr>
+                <td>2021007</td>
+                <td>Nguyễn Thị G</td>
+                <td>Nữ</td>
+                <td>Hồ Chí Minh</td>
+                <td>05/05/2004</td>
+                <td>4</td>
+                <td>102</td>
+                <td>0123578977</td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="sv.js"></script>
+
+</body>
+</html>

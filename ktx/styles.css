@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('../images/banner-truong-dai-hoc-giao-thong-van-tai.png') no-repeat center center;
+    background-size: cover;
+}
+#error {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 30px; 
+}
+
+.wrapper {
+    width: 420px;
+    background: rgba(240, 248, 255, 0.9); /* Màu xanh nhạt rất nhẹ với độ trong suốt */
+    color: #2a3d4c; /* Màu xám xanh đậm */
+    border-radius: 10px;
+    padding: 30px 40px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper h1 {
+    font-size: 36px;
+    text-align: center;
+    color: #3a7ca5; /* Màu xanh biển nhạt */
+}
+
+.wrapper .input-box {
+    width: 100%;
+    height: 50px;
+    background: #d0e8f2; /* Màu xanh pastel nhẹ */
+    margin: 30px 0;
+    position: relative;
+    border-radius: 40px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: 2px solid rgba(58, 124, 165, 0.3); /* Màu xanh biển với độ trong suốt */
+    border-radius: 40px;
+    font-size: 16px;
+    color: #2a3d4c;
+    padding: 0 45px 0 20px;
+}
+
+.input-box input::placeholder {
+    color: #5a7184; /* Màu xám xanh nhạt cho placeholder */
+}
+
+.input-box i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #3a7ca5;
+}
+
+.wrapper .remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+}
+
+.remember-forgot label input {
+    accent-color: #3a7ca5;
+}
+
+.remember-forgot a {
+    color: #3a7ca5;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    width: 100%;
+    height: 45px;
+    background: #3a7ca5;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(58, 124, 165, 0.3);
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.wrapper .register-link {
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+
+.register-link p a {
+    color: #3a7ca5;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-link p a:hover {
+    text-decoration: underline;
+}
