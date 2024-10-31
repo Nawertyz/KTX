@@ -249,6 +249,7 @@ table {
 @media (max-width: 768px) {
     nav {
         display: flex;
+<<<<<<< HEAD
         flex-direction: column; 
         align-items: center; 
         text-align: center; 
@@ -258,12 +259,25 @@ table {
     nav a {
         display: flex;
         flex-direction: column; 
+=======
+        flex-direction: column; /* Sắp xếp theo dạng cột */
+        align-items: center; /* Căn giữa biểu tượng */
+        text-align: center; /* Căn giữa chữ */
+        gap: 10px; /* Khoảng cách giữa các mục */
+        padding: 5px;
+    }
+
+    nav a {
+        display: flex;
+        flex-direction: column; /* Biểu tượng nằm trên văn bản */
+>>>>>>> a801b603a74a18f2d471ea7e889ee0deb7c0870d
         align-items: center;
         text-decoration: none;
         font-size: 14px;
         color: rgb(111, 95, 95);
         padding: 10px;
     }
+<<<<<<< HEAD
     nav a i {
         color: #ec6f7a; 
         font-size: 30px;
@@ -284,3 +298,29 @@ table {
     }
 
 }
+=======
+
+    nav a i {
+        color: #ec6f7a; /* Màu của biểu tượng */
+        font-size: 30px; /* Tăng kích thước biểu tượng */
+        margin-bottom: 5px; /* Khoảng cách giữa biểu tượng và văn bản */
+    }
+    
+    h1 {
+        font-size: 24px;
+        padding: 10px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    /* Giữ các phần tử trong bảng ở trung tâm */
+    table th, table td {
+        white-space: nowrap;
+    }
+    
+}
+>>>>>>> a801b603a74a18f2d471ea7e889ee0deb7c0870d
