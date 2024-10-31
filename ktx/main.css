@@ -50,4 +50,14 @@
     font-size: 23px;
     font-weight: bold;
     color: inherit;
+} 
+@media (max-width: 768px) {
+    .card {
+        width: calc(100% - 40px); /* Tăng chiều rộng của ô trên điện thoại */
+        padding: 20px;
+    }
+
+    .card span {
+        font-size: 20px;
+    }
 }
