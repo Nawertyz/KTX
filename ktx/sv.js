@@ -24,15 +24,13 @@ const studentData = {
 };
 let currentRow = null;
 function isStudentExists(msv) {
-    for (let row of tableBody.rows) {
-        if (row.cells[0].textContent === msv) {
-            return true;
-        }
-    }
-    return false;
+    return msv in studentData;
 }
 function validateRoom(room) {
     return validRooms.includes(room);
+}
+function isRoomAvailable(room) {
+    return roomStatus[room] === "Còn Trống";
 }
 function isValidDate(date) {
     const regex = /^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/\d{4}$/;
@@ -44,64 +42,13 @@ function validateGender(gender) {
 function addOrUpdateStudent() {
     const msv = msvInput.value.trim();
     const roomNumber = spInput.value.trim();
-    if (msv === "" || roomNumber === "") {
-        alert("Vui lòng điền đầy đủ thông tin");
+    if (msv === "") {
+        alert("Vui lòng nhập mã sinh viên");
         return;
     }
     if (isStudentExists(msv)) {
-        alert("Mã sinh viên đã có trong bảng");
-        return;
-    }
-    if (!validateRoom(roomNumber)) {
-        alert("Phòng không hợp lệ");
-        return;
-    }
-    if (roomStatus[roomNumber] === "Đã Đầy") {
-        alert("Phòng không còn trống");
-        return;
-    }
-    let student = studentData[msv];
-    if (!student) {
-        const name = prompt("Nhập tên sinh viên:");
-        const nameRegex = /^[A-Za-zÀ-ỹ\s]+$/;
-        if (!nameRegex.test(name)) {
-            alert("Hãy nhập đúng họ tên của bạn");
-            return;
-        }
-        const dob = prompt("Nhập ngày sinh (dd/mm/yyyy):");
-        if (!isValidDate(dob)) {
-            alert("Hãy nhập đúng định dạng");
-            return;
-        }
-        const className = prompt("Nhập lớp:");
-        const gender = prompt("Nhập giới tính (Nam/Nữ):");
-        if (!validateGender(gender)) {
-            alert("Hãy nhập đúng yêu cầu");
-            return;
-        }
-        const hometown = prompt("Nhập quê quán:") || "Không xác định";
-        if (!nameRegex.test(hometown)) {
-            alert("Hãy nhập đúng quê quán của bạn");
-            return;
-        }
-        const contact = prompt("Nhập số liên hệ:") || "Không xác định";
-        student = {
-            name, dob, class: className, gender, hometown, contact
-        };
-        studentData[msv] = student;
-    }
-    if (currentRow) {
-        currentRow.cells[0].textContent = msv;
-        currentRow.cells[1].textContent = student.name;
-        currentRow.cells[2].textContent = student.gender;
-        currentRow.cells[3].textContent = student.hometown;
-        currentRow.cells[4].textContent = student.dob;
-        currentRow.cells[5].textContent = student.class;
-        currentRow.cells[6].textContent = roomNumber;
-        currentRow.cells[7].textContent = student.contact;
-        alert("Đã cập nhật thông tin sinh viên");
-        currentRow = null;
-    } else {
+        const student = studentData[msv];
+        tableBody.innerHTML = "";
         const newRow = tableBody.insertRow();
         newRow.insertCell(0).textContent = msv;
         newRow.insertCell(1).textContent = student.name;
@@ -109,9 +56,8 @@ function addOrUpdateStudent() {
         newRow.insertCell(3).textContent = student.hometown;
         newRow.insertCell(4).textContent = student.dob;
         newRow.insertCell(5).textContent = student.class;
-        newRow.insertCell(6).textContent = roomNumber;
+        newRow.insertCell(6).textContent = student.room;
         newRow.insertCell(7).textContent = student.contact;
-
         const actionCell = newRow.insertCell(8);
         const editButton = document.createElement("button");
         editButton.textContent = "Chỉnh sửa";
@@ -122,7 +68,64 @@ function addOrUpdateStudent() {
         deleteButton.textContent = "Xóa";
         deleteButton.addEventListener("click", () => deleteStudent(newRow));
         actionCell.appendChild(deleteButton);
+        return;
     }
+    if (!validateRoom(roomNumber)) {
+        alert("Số phòng không hợp lệ. Vui lòng nhập lại");
+        return;
+    }
+    if (!isRoomAvailable(roomNumber)) {
+        alert("Phòng đã đầy. Vui lòng chọn phòng khác");
+        return;
+    }
+    const name = prompt("Nhập tên sinh viên:");
+    const nameRegex = /^[A-Za-zÀ-ỹ\s]+$/;
+    if (!nameRegex.test(name)) {
+        alert("Hãy nhập đúng họ tên của bạn");
+        return;
+    }
+    const dob = prompt("Nhập ngày sinh (dd/mm/yyyy):");
+    if (!isValidDate(dob)) {
+        alert("Hãy nhập đúng định dạng");
+        return;
+    }
+    const className = prompt("Nhập lớp:");
+    const gender = prompt("Nhập giới tính (Nam/Nữ):");
+    if (!validateGender(gender)) {
+        alert("Hãy nhập đúng yêu cầu");
+        return;
+    }
+    const hometown = prompt("Nhập quê quán:") || "Không xác định";
+    if (!nameRegex.test(hometown)) {
+        alert("Hãy nhập đúng quê quán của bạn");
+        return;
+    }
+    const contact = prompt("Nhập số liên hệ:") || "Không xác định";
+    const student = {
+        name, dob, class: className, gender, hometown, contact, room: roomNumber
+    };
+    studentData[msv] = student;
+    const newRow = tableBody.insertRow();
+    newRow.insertCell(0).textContent = msv;
+    newRow.insertCell(1).textContent = student.name;
+    newRow.insertCell(2).textContent = student.gender;
+    newRow.insertCell(3).textContent = student.hometown;
+    newRow.insertCell(4).textContent = student.dob;
+    newRow.insertCell(5).textContent = student.class;
+    newRow.insertCell(6).textContent = roomNumber;
+    newRow.insertCell(7).textContent = student.contact;
+
+    const actionCell = newRow.insertCell(8);
+    const editButton = document.createElement("button");
+    editButton.textContent = "Chỉnh sửa";
+    editButton.style.marginRight = "5px";
+    editButton.addEventListener("click", () => editStudent(newRow));
+    actionCell.appendChild(editButton);
+    const deleteButton = document.createElement("button");
+    deleteButton.textContent = "Xóa";
+    deleteButton.addEventListener("click", () => deleteStudent(newRow));
+    actionCell.appendChild(deleteButton);
+
     msvInput.value = "";
     spInput.value = "";
 }
@@ -137,13 +140,13 @@ function editStudent(row) {
     const contact = prompt("Nhập số liên hệ:", cells[7].textContent);
     const roomNumber = prompt("Nhập số phòng:", cells[6].textContent);
     if (!validateRoom(roomNumber)) {
-        alert("Phòng không hợp lệ");
+        alert("Số phòng không hợp lệ. Vui lòng nhập lại.");
         return;
     }
-    if (roomStatus[roomNumber] === "Đã Đầy") {
-        alert("Phòng không còn trống");
+    if (!isRoomAvailable(roomNumber)) {
+        alert("Phòng đã đầy. Vui lòng chọn phòng khác.");
         return;
-    }
+    } 
     cells[1].textContent = name;
     cells[2].textContent = gender;
     cells[3].textContent = hometown;
@@ -172,9 +175,9 @@ function loadDefaultStudents() {
         newRow.insertCell(3).textContent = student.hometown;
         newRow.insertCell(4).textContent = student.dob;
         newRow.insertCell(5).textContent = student.class;
-        // Sử dụng số phòng từ studentData, nếu không có thì hiển thị "Không có phòng"
         newRow.insertCell(6).textContent = student.room || "Không có phòng";
         newRow.insertCell(7).textContent = student.contact;
+
         const actionCell = newRow.insertCell(8);
         const editButton = document.createElement("button");
         editButton.textContent = "Chỉnh sửa";
@@ -187,4 +190,5 @@ function loadDefaultStudents() {
         actionCell.appendChild(deleteButton);
     }
 }
-loadDefaultStudents(); 
+loadDefaultStudents();
+
