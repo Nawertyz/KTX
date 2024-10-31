@@ -1,8 +1,6 @@
 * {
     box-sizing: border-box;
 }
-
-/* Định dạng cho toàn bộ trang */
 body {
     font-family: Arial, sans-serif;
     background: url('../images/banner-truong-dai-hoc-giao-thong-van-tai.png') no-repeat center center;
@@ -11,13 +9,10 @@ body {
     padding: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
-   
-    
+    align-items: center;   
 }
-
 .header-logo {
-    display: flex; /* Sử dụng flexbox để căn giữa logo và chữ */
+    display: flex; 
     align-items: center;
     margin: 12px;
     padding: 10px;
@@ -29,40 +24,30 @@ body {
 .header-logo a:hover {
     background-color: #919191;
 }
-  
 .header-logo img {
-    height: auto; /* Giữ tỉ lệ khung hình của logo */
-
+    height: auto; 
     width: 50px;
-     /* Đặt chiều rộng cho logo */
-    height: auto; /* Giữ tỉ lệ khung hình của logo */
-    margin-right: 10px; /* Thêm khoảng cách giữa logo và chữ */
+    margin-right: 10px; 
 }
 .header-logo span {
-    font-weight: bold; /* Làm cho chữ in đậm */
-    font-size: 14px; /* Thay đổi kích thước chữ (tùy chọn) */
+    font-weight: bold; 
+    font-size: 14px;
 }
-
-
 .icon{
     width: 200px;
     float: left;
     height: 50px;
 }
-
-
-/* Định dạng cho phần header */
 header {
     display: flex;
     width: 100%;
-
     align-items: center;
     justify-content: space-between;
     padding: 15px 30px;
     box-shadow: o 2px 8px rgba(0, 0, 0, 0.1);
 }
 .header .logo {
-    height: 40px; /* Kích thước logo */
+    height: 40px; 
     margin-right: 10px;
   }
 header nav {
@@ -70,7 +55,6 @@ header nav {
     justify-content: center;
     gap: 20px;
 }
-
 header nav a {
     color: rgb(111, 95, 95);
     font-size: 16px;
@@ -80,7 +64,6 @@ header nav a {
     transition: background-color 0.3s;
     margin: 5px;
 }
-
 header nav a:hover {
     background-color: #a1d7df;
     border-radius: 20px;
@@ -89,11 +72,10 @@ header nav a:hover {
     margin-top: 20px; 
     display: flex;
     text-align: center;
-    justify-content: center; /* Căn giữa theo chiều ngang */
-    align-items: center; /* Căn giữa theo chiều dọc */
-    flex-wrap: wrap; /* Cho phép xuống dòng */
+    justify-content: center; 
+    align-items: center; 
+    flex-wrap: wrap; 
     padding: 5px;
-    /* Điều chỉnh khoảng cách như mong muốn */
 }
 nav a {
     display: inline-flex;
@@ -106,65 +88,54 @@ nav a {
     text-align: center;
     
 }
-
-
- 
 nav a i {
-    margin-right: 13px; /* Khoảng cách giữa biểu tượng và văn bản */
-    color: #ec6f7a; /* Màu của biểu tượng */
+    margin-right: 13px; 
+    color: #ec6f7a; 
     font-size: 27px;
 }
 nav i:hover {
-    color: #8359cf; /* Màu khi hover qua biểu tượng */
+    color: #8359cf; 
 }
 nav a:hover {
-    color: #101010; /* Màu văn bản khi hover */
+    color: #101010;
     padding: 15px;
 }
 input {
-    border: none; /* Loại bỏ viền mặc định */
-    outline: none; /* Loại bỏ outline mặc định */
-    background-color: white; /* Màu nền */
-    padding: 8px; /* Đệm nội dung */
-    border-radius: 4px; /* Bo tròn góc */
+    border: none;
+    outline: none; 
+    background-color: white; 
+    padding: 8px; 
+    border-radius: 4px; 
 }
 input[type="number"]:focus,
 input[type="text"]:focus {
     border: 2px solid black;
     outline: none;
 }
-
-
-
-/* Định dạng cho phần tiêu đề chính */
 h1 {
-
-    font-size: 26px; /* Kích thước chữ */
-    font-weight: bold; /* Làm cho chữ in đậm */
-    color: #17add7; /* Màu chữ */
-    text-align: center; /* Căn giữa tiêu đề */
-    margin: 3px 0px; /* Khoảng cách bên trên và dưới tiêu đề */
-    text-transform: uppercase; /* Chữ in hoa */
-    letter-spacing: 1px; /* Khoảng cách giữa các chữ cái */
-    position: relative; /* Để sử dụng cho hiệu ứng */
+    font-size: 26px; 
+    font-weight: bold; 
+    color: #17add7;
+    text-align: center; 
+    margin: 3px 0px;
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+    position: relative; 
     font-family: 'Times New Roman', Times, serif;
-
 }
 h1::after {
-    content: ""; /* Tạo một phần tử giả */
-    display: block; /* Hiển thị như một khối */
-    width: 50%; /* Chiều rộng của đường gạch dưới */
-    height: 5px; /* Chiều cao của đường gạch dưới */
-    background: #a3cadd; /* Màu sắc cho đường gạch dưới */
-    margin: 10px auto; /* Căn giữa */
-    border-radius: 10px; /* Bo góc cho đường gạch dưới */
-    transition: width 0.7s; /* Hiệu ứng chuyển tiếp khi hover */
+    content: ""; 
+    display: block; 
+    width: 50%; 
+    height: 5px; 
+    background: #a3cadd; 
+    margin: 10px auto; 
+    border-radius: 10px; 
+    transition: width 0.7s; 
 }
-
 h1:hover::after {
-    width: 70%; /* Đường gạch dưới mở rộng khi hover */
+    width: 70%; 
 }
-/*màu cho thanh toán*/
 button.paid {
     background-color: #28a745;
     color: white;
@@ -174,17 +145,14 @@ button:not(.paid) {
     color: white;
 }
 td:contains('Chưa thanh toán') {
-    color: red; /* Màu đỏ cho trạng thái chưa thanh toán */
-    font-weight: bold; /* In đậm chữ */
+    color: red; 
+    font-weight: bold; 
 }
-
-/* Thêm cho các ô có thể chỉnh sửa */
 td[contenteditable="true"] {
-    background-color: #e7f3fe; /* Màu nền cho ô có thể chỉnh sửa */
+    background-color: #e7f3fe;
 }
-/* Định dạng toàn bộ form */
 form {
-    max-width: 250px; /* Đặt chiều rộng tối đa cho form */
+    max-width: 250px; 
     width: 45%;
     padding: 20px;
     background-color: #a1cfee;
@@ -199,11 +167,10 @@ button[type="submit"] {
     font-size: 16px;
     border: 2px solid #bdd1e9;
     border-radius: 10px;
-    margin-bottom: 15px; /* Tăng khoảng cách giữa các trường */
-    width: 100%; /* Chiều rộng 100% để đồng nhất với submit */
-    box-sizing: border-box; /* Đảm bảo padding không làm tăng kích thước trường */
+    margin-bottom: 15px; 
+    width: 100%; 
+    box-sizing: border-box;
 }
-
 button[type="submit"] {
     background-color:#2897ec;
     color: white;
@@ -211,159 +178,109 @@ button[type="submit"] {
     cursor: pointer;
     transition: background-color 0.3s;
 }
-
 button[type="submit"]:hover {
     background-color:  #74b9ff;
 }
-
-/* Định dạng cho bảng */
-
 table {
     width: 80%;
     margin-top: 20px;
     border-collapse: collapse;
 }
-
 table thead {
     background-color: #8cb5d4;
     color: white;
 }
-
 table th, table td {
     padding: 12px;
     border: 1px solid #ccc;
     text-align: center;
     font-size: 16px;
 }
-
 table tbody tr:nth-child(even) {
-    background-color: #f0f5f5; /* Xanh xám nhạt */
+    background-color: #f0f5f5;
 }
 table tbody tr:nth-child(odd){
-    background-color: #ffffff; /* Màu trắng */
+    background-color: #ffffff; 
 }
 table {
-    width: 100%; /* Đảm bảo bảng chiếm toàn bộ chiều ngang */
-    border-collapse: collapse; /* Gộp các đường viền */
+    width: 100%;
+    border-collapse: collapse;
     margin-top: 20px;
 }
 
-
-
-/* Đặt chiều rộng cố định cho các cột */
-th:nth-child(1), td:nth-child(1) {
-    width: 10%; 
-}
-
-th:nth-child(2), td:nth-child(2) {
-    width: 20%;
-}
-
-th:nth-child(3), td:nth-child(3) {
-    width: 5%; 
-}
-
-th:nth-child(4), td:nth-child(4) {
-    width: 15%; 
-}
-
-th:nth-child(5), td:nth-child(5) {
-    width: 15%;
-}
-
-
-
-
-/* CSS cho bảng */
 #dichvu-table {
-    width: 100%; /* Đặt chiều rộng của bảng */
-    border-collapse: collapse; /* Xóa khoảng cách giữa các ô */
+    width: 100%; 
+    border-collapse: collapse; 
 }
-
 #dichvu-table th,
 #dichvu-table td {
-    border: 1px solid #ddd; /* Thêm đường viền cho các ô */
-    padding: 8px; /* Thêm khoảng cách bên trong các ô */
+    border: 1px solid #ddd; 
+    padding: 8px;
 }
 
-/* Đặt chiều rộng cố định cho các cột */
 #dichvu-table th:nth-child(1),
 #dichvu-table td:nth-child(1) {
-    width: 10%; /* Phòng */
+    width: 10%; 
 }
-
 #dichvu-table th:nth-child(2),
 #dichvu-table td:nth-child(2) {
-    width: 10%; /* Điện */
+    width: 10%; 
 }
-
 #dichvu-table th:nth-child(3),
 #dichvu-table td:nth-child(3) {
-    width: 10%; /* Nước */
+    width: 10%;
 }
-
 #dichvu-table th:nth-child(4),
 #dichvu-table td:nth-child(4) {
-    width: 10%; /* Dịch vụ */
+    width: 10%; 
 }
-
 #dichvu-table th:nth-child(5),
 #dichvu-table td:nth-child(5) {
-    width: 10%; /* Ngày tạo */
+    width: 10%; 
 }
-
 #dichvu-table th:nth-child(6),
 #dichvu-table td:nth-child(6) {
-    width: 10%; /* Trạng thái */
+    width: 10%;
 }
-
 #dichvu-table th:nth-child(7),
 #dichvu-table td:nth-child(7) {
-    width: 10%; /* Nút chỉnh sửa và xóa */
+    width: 10%;
 }
-/* Điều chỉnh cho màn hình nhỏ hơn */
-/* Định dạng cho màn hình nhỏ */
-/* Điều chỉnh cho màn hình điện thoại */
 @media (max-width: 768px) {
     nav {
         display: flex;
-        flex-direction: column; /* Sắp xếp theo dạng cột */
-        align-items: center; /* Căn giữa biểu tượng */
-        text-align: center; /* Căn giữa chữ */
-        gap: 10px; /* Khoảng cách giữa các mục */
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center; 
+        gap: 10px; 
         padding: 5px;
     }
-
     nav a {
         display: flex;
-        flex-direction: column; /* Biểu tượng nằm trên văn bản */
+        flex-direction: column; 
         align-items: center;
         text-decoration: none;
         font-size: 14px;
         color: rgb(111, 95, 95);
         padding: 10px;
     }
-
     nav a i {
-        color: #ec6f7a; /* Màu của biểu tượng */
-        font-size: 30px; /* Tăng kích thước biểu tượng */
-        margin-bottom: 5px; /* Khoảng cách giữa biểu tượng và văn bản */
+        color: #ec6f7a; 
+        font-size: 30px;
+        margin-bottom: 5px;
     }
-    
     h1 {
         font-size: 24px;
         padding: 10px;
     }
-
     table {
         display: block;
         overflow-x: auto;
         white-space: nowrap;
     }
-
-    /* Giữ các phần tử trong bảng ở trung tâm */
     table th, table td {
+        width:100%;
         white-space: nowrap;
     }
-    
+
 }
