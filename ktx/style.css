@@ -324,76 +324,33 @@ th:nth-child(5), td:nth-child(5) {
         padding: 10px;
     }
     .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        overflow-x: auto; /* Thêm thanh cuộn ngang */
-        white-space: nowrap; /* Giữ các phần tử không xuống dòng */
-        display: flex;
+        /* Loại bỏ flex-direction và overflow-x */
     }
-    /* Đổi từ sắp xếp ngang sang dọc cho thanh navigation */
+
     header nav {
-        flex-direction: column;
-        gap: 10px;
-        overflow-x: auto;
-        white-space: nowrap;
+        /* Loại bỏ flex-direction: column; */
+        gap: 20px; /* Giữ lại khoảng cách mặc định */
     }
 
-    /* Điều chỉnh lại độ rộng của form và bảng */
-    form {
-        width: 100%;
-        padding: 10px;
-    }
-    table {
-        overflow-x: auto;
-        display: block; /* Hiển thị bảng như một khối có thể cuộn */
-        width: 100%; /* Chiều rộng đầy đủ */
-        min-width: 600px; /* Đặt chiều rộng tối thiểu */
-    }
-    /* Điều chỉnh kích thước chữ và căn giữa tiêu đề */
-    h1 {
-        font-size: 22px;
-        padding: 10px;
-    }
-
-    /* Đảm bảo các ô card sẽ xếp dọc */
-
-    /* Card rộng 100% trong màn hình nhỏ */
+    /* Đảm bảo các ô card vẫn xếp ngang */
     .card {
-        width: 90%;
-        margin: 10px 0;
-        min-width: 250px; /* Đặt chiều rộng tối thiểu cho mỗi card */
-        display: inline-block; /* Hiển thị card theo dòng */
-    }
-
-    /* Giảm kích thước font của các liên kết điều hướng */
-    nav a {
-        font-size: 14px;
-        padding: 10px;
-    }
-
-    /* Điều chỉnh kích thước các input */
-    input[type="text"],
-    input[type="number"],
-    button[type="submit"] {
-        font-size: 14px;
+        width: calc(33.33% - 20px); /* Giữ nguyên chiều rộng */
+        margin: 3px;
     }
 }
 
-/* Định dạng cho màn hình rất nhỏ, dưới 480px */
 @media (max-width: 480px) {
-    
+    /* Giữ nguyên kích thước font chữ */
     h1 {
-        font-size: 20px;
+        font-size: 26px;
     }
 
     .input-box, .btn {
-        font-size: 14px;
-        padding: 8px;
+        font-size: 16px;
     }
 
-    /* Tăng kích thước của các biểu tượng */
+    /* Giữ nguyên kích thước biểu tượng */
     nav a i {
-        font-size: 20px;
+        font-size: 27px;
     }
 }
