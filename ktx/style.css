@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 /* Định dạng cho toàn bộ trang */
 body {
     font-family: Arial, sans-serif;
@@ -8,7 +12,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow-x: hidden; /* Ngăn chặn cuộn ngang */
+   
     
 }
 
@@ -319,81 +323,47 @@ th:nth-child(5), td:nth-child(5) {
 }
 /* Điều chỉnh cho màn hình nhỏ hơn */
 /* Định dạng cho màn hình nhỏ */
+/* Điều chỉnh cho màn hình điện thoại */
 @media (max-width: 768px) {
-    body {
+    nav {
+        display: flex;
+        flex-direction: column; /* Sắp xếp theo dạng cột */
+        align-items: center; /* Căn giữa biểu tượng */
+        text-align: center; /* Căn giữa chữ */
+        gap: 10px; /* Khoảng cách giữa các mục */
+        padding: 5px;
+    }
+
+    nav a {
+        display: flex;
+        flex-direction: column; /* Biểu tượng nằm trên văn bản */
+        align-items: center;
+        text-decoration: none;
+        font-size: 14px;
+        color: rgb(111, 95, 95);
         padding: 10px;
     }
-    .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        overflow-x: auto; /* Thêm thanh cuộn ngang */
-        white-space: nowrap; /* Giữ các phần tử không xuống dòng */
-        display: flex;
+
+    nav a i {
+        color: #ec6f7a; /* Màu của biểu tượng */
+        font-size: 30px; /* Tăng kích thước biểu tượng */
+        margin-bottom: 5px; /* Khoảng cách giữa biểu tượng và văn bản */
     }
-    /* Đổi từ sắp xếp ngang sang dọc cho thanh navigation */
-    header nav {
-        flex-direction: column;
-        gap: 10px;
+    
+    h1 {
+        font-size: 24px;
+        padding: 10px;
+    }
+
+    table {
+        display: block;
         overflow-x: auto;
         white-space: nowrap;
     }
 
-    /* Điều chỉnh lại độ rộng của form và bảng */
-    form {
-        width: 100%;
-        padding: 10px;
+    /* Giữ các phần tử trong bảng ở trung tâm */
+    table th, table td {
+        white-space: nowrap;
     }
-    table {
-        overflow-x: auto;
-        display: block; /* Hiển thị bảng như một khối có thể cuộn */
-        width: 100%; /* Chiều rộng đầy đủ */
-        min-width: 600px; /* Đặt chiều rộng tối thiểu */
-    }
-    /* Điều chỉnh kích thước chữ và căn giữa tiêu đề */
-    h1 {
-        font-size: 22px;
-        padding: 10px;
-    }
-
-    /* Đảm bảo các ô card sẽ xếp dọc */
-
-    /* Card rộng 100% trong màn hình nhỏ */
-    .card {
-        width: 90%;
-        margin: 10px 0;
-        min-width: 250px; /* Đặt chiều rộng tối thiểu cho mỗi card */
-        display: inline-block; /* Hiển thị card theo dòng */
-    }
-
-    /* Giảm kích thước font của các liên kết điều hướng */
-    nav a {
-        font-size: 14px;
-        padding: 10px;
-    }
-
-    /* Điều chỉnh kích thước các input */
-    input[type="text"],
-    input[type="number"],
-    button[type="submit"] {
-        font-size: 14px;
-    }
-}
-
-/* Định dạng cho màn hình rất nhỏ, dưới 480px */
-@media (max-width: 480px) {
     
-    h1 {
-        font-size: 20px;
-    }
-
-    .input-box, .btn {
-        font-size: 14px;
-        padding: 8px;
-    }
-
-    /* Tăng kích thước của các biểu tượng */
-    nav a i {
-        font-size: 20px;
-    }
 }
