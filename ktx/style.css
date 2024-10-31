@@ -320,37 +320,45 @@ th:nth-child(5), td:nth-child(5) {
 /* Điều chỉnh cho màn hình nhỏ hơn */
 /* Định dạng cho màn hình nhỏ */
 @media (max-width: 768px) {
-    body {
+    nav {
+        display: flex;
+        flex-direction: column; /* Sắp xếp theo dạng cột */
+        align-items: center; /* Căn giữa biểu tượng */
+        text-align: center; /* Căn giữa chữ */
+        gap: 10px; /* Khoảng cách giữa các mục */
+        padding: 5px;
+    }
+
+    nav a {
+        display: flex;
+        flex-direction: column; /* Biểu tượng nằm trên văn bản */
+        align-items: center;
+        text-decoration: none;
+        font-size: 14px;
+        color: rgb(111, 95, 95);
         padding: 10px;
     }
-    .container {
-        /* Loại bỏ flex-direction và overflow-x */
-    }
 
-    header nav {
-        /* Loại bỏ flex-direction: column; */
-        gap: 20px; /* Giữ lại khoảng cách mặc định */
-    }
-
-    /* Đảm bảo các ô card vẫn xếp ngang */
-    .card {
-        width: calc(33.33% - 20px); /* Giữ nguyên chiều rộng */
-        margin: 3px;
-    }
-}
-
-@media (max-width: 480px) {
-    /* Giữ nguyên kích thước font chữ */
-    h1 {
-        font-size: 26px;
-    }
-
-    .input-box, .btn {
-        font-size: 16px;
-    }
-
-    /* Giữ nguyên kích thước biểu tượng */
     nav a i {
-        font-size: 27px;
+        color: #ec6f7a; /* Màu của biểu tượng */
+        font-size: 30px; /* Tăng kích thước biểu tượng */
+        margin-bottom: 5px; /* Khoảng cách giữa biểu tượng và văn bản */
     }
+    
+    h1 {
+        font-size: 24px;
+        padding: 10px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    /* Giữ các phần tử trong bảng ở trung tâm */
+    table th, table td {
+        white-space: nowrap;
+    }
+    
 }
