@@ -53,7 +53,7 @@
 } 
 @media (max-width: 768px) {
     .card {
-        width: calc(100% - 40px); /* Tăng chiều rộng của ô trên điện thoại */
+        width: calc(33.33% - 20px); /* Tăng chiều rộng của ô trên điện thoại */
         padding: 20px;
     }
 
